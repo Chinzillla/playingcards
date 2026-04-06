@@ -1,6 +1,6 @@
 namespace playingcards.Models
 {
-    public enum Suit
+    internal enum Suit
     {
         Diamond,
         Club,

@@ -1,6 +1,6 @@
 namespace playingcards.Models
 {
-    public enum Rank
+    internal enum Rank
     {
         Ace = 1,
         Two = 2,
