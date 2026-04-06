@@ -16,4 +16,15 @@ namespace playingcards.Models
         Queen = 12,
         King = 13
     }
+    internal static class RankExtensions
+    {
+        public static string ToDisplayString(this Rank rank) => rank switch
+        {
+            Rank.Ace => "A",
+            Rank.Jack => "J",
+            Rank.Queen => "Q",
+            Rank.King => "K",
+            _ => ((int)rank).ToString()
+        };
+    }
 }

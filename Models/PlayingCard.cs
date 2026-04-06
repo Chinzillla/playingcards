@@ -1,15 +1,21 @@
 namespace playingcards.Models
 {
-    internal class PlayingCard(Suit suit, Rank rank) : Card
+    internal class PlayingCard : Card
     {
-        private Suit Suit { get; } = suit;
-        private Rank Rank { get; } = rank;
+        private Suit Suit { get; }
+        private Rank Rank { get; }
+
+        public PlayingCard(Suit suit, Rank rank)
+        {
+            Suit = suit;
+            Rank = rank;
+        }
 
         public override int CardValue => (int)Rank;
 
         public override string ToString()
         {
-            return $"{Rank} of {Suit}";
+            return $"{Rank.ToDisplayString()} of {Suit}";
         }
 
         public static PlayingCard Parse(string suitText, string valueText)
